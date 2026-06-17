@@ -1,0 +1,186 @@
+```html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uniclean</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:#030712;
+    color:white;
+}
+
+/* Arkaplan */
+.background{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%, rgba(0,255,255,.15), transparent 25%),
+    radial-gradient(circle at 80% 30%, rgba(123,92,255,.18), transparent 25%),
+    radial-gradient(circle at 50% 90%, rgba(0,180,255,.12), transparent 30%),
+    #030712;
+}
+
+.background::before{
+    content:'';
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:linear-gradient(#00e5ff,#7b5cff);
+    filter:blur(250px);
+    opacity:.18;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    animation:float 8s ease-in-out infinite;
+}
+
+@keyframes float{
+    50%{
+        transform:translate(-50%,-55%);
+    }
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    z-index:2;
+    padding:30px;
+}
+
+.content{
+    max-width:900px;
+}
+
+.logo{
+    font-size:1rem;
+    letter-spacing:6px;
+    color:#8aa4ff;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(4rem,10vw,8rem);
+    line-height:.95;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#00e5ff,#7b5cff,#00e5ff);
+    background-size:300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:gradientMove 8s linear infinite;
+}
+
+@keyframes gradientMove{
+    from{background-position:0%}
+    to{background-position:300%}
+}
+
+p{
+    color:#b8c3d8;
+    font-size:1.2rem;
+    line-height:1.8;
+    max-width:700px;
+    margin:auto;
+}
+
+.buttons{
+    margin-top:40px;
+}
+
+.btn{
+    display:inline-block;
+    padding:18px 40px;
+    border-radius:18px;
+    text-decoration:none;
+    font-weight:600;
+    color:white;
+    background:linear-gradient(135deg,#00e5ff,#7b5cff);
+    box-shadow:0 20px 60px rgba(0,229,255,.25);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.03);
+}
+
+.blur-box{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.05);
+    backdrop-filter:blur(20px);
+}
+
+.box1{
+    top:-200px;
+    left:-150px;
+}
+
+.box2{
+    bottom:-250px;
+    right:-150px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="blur-box box1"></div>
+<div class="blur-box box2"></div>
+
+<section class="hero">
+
+    <div class="content">
+
+        <div class="logo">
+            UNICLEAN
+        </div>
+
+        <h1>
+            Temizliğin
+            <span class="gradient">Yeni Standardı</span>
+        </h1>
+
+        <p>
+            Profesyonel hijyen çözümleriyle yaşam alanlarınıza
+            modern, güvenilir ve kusursuz bir temizlik deneyimi sunuyoruz.
+        </p>
+
+        <div class="buttons">
+            <a href="#" class="btn">Başlayın</a>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+```
